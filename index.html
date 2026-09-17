@@ -7,7 +7,7 @@
 <meta name="description" content="Композитні вініри в Києві: 18 одиниць за 39 990 грн. Без болю, без обточування, результат за 1 візит.">
 <meta property="og:title" content="Отримайте ідеальну посмішку за 1 візит 😁">
 <meta property="og:description" content="18 композитних вінірів за 39 990 грн. Без болю, без обточування, за 1 візит.">
-<meta property="og:image" content="img/786aa03a.jpg">
+<meta property="og:image" content="https://viniry-kyiv.github.io/img/786aa03a.jpg">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😁</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@ a{color:inherit}
 .step{display:none;flex:1;flex-direction:column}
 .step.on{display:flex}
 /* split layout */
-.split{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100dvh}
+.split{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;min-height:100dvh}
 .split .media{position:relative;background:#000}
 .split .media img{width:100%;height:100%;object-fit:cover;display:block}
 .split .body{display:flex;flex-direction:column;justify-content:center;padding:56px 64px 40px;position:relative}
@@ -44,10 +44,9 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
 .foot a{color:var(--muted);text-decoration:none}
 /* question layout */
 .qwrap{flex:1;display:flex;flex-direction:column;padding:48px 24px 110px;max-width:1180px;width:100%;margin:0 auto}
-.qsplit{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100dvh}
-.qsplit .media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9)}
+.qsplit{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;min-height:100dvh}
+.qsplit .media img{width:100%;height:100%;object-fit:cover;display:block}
 .qsplit .media{background:var(--bg2);position:relative}
-.qsplit .media:after{content:"";position:absolute;inset:0;background:rgba(13,59,55,.35)}
 .qsplit .body{display:flex;flex-direction:column;justify-content:center;padding:56px 64px 110px}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .opt{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px;cursor:pointer;font-size:15px;font-weight:500;transition:background .15s,border-color .15s;user-select:none;min-height:66px}
@@ -88,6 +87,8 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
 .consent input{margin-top:2px;accent-color:#128a76;width:16px;height:16px}
 .consent a{color:var(--muted)}
 .errmsg{color:#ffb3b0;font-size:13px;min-height:18px}
+.linkbtn{background:none;border:0;color:var(--muted);font-size:14px;cursor:pointer;padding:10px;text-decoration:underline;text-underline-offset:3px}
+.linkbtn:hover{color:#fff}
 .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
 /* finish */
 .finish .body{text-align:center;align-items:center}
@@ -98,13 +99,14 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
 @keyframes sp{to{transform:rotate(360deg)}}
 @media (max-width:860px){
   .split,.qsplit{grid-template-columns:1fr;min-height:auto}
-  .split .media{height:56vw;max-height:420px}
-  .qsplit .media{height:44vw;max-height:300px}
-  .split .body,.qsplit .body{padding:26px 20px 120px}
+  .split .media{height:62vw;max-height:440px}
+  .qsplit .media{height:64vw;max-height:360px}
+  .split .media img,.qsplit .media img{object-position:var(--pos,50% 30%)}
+  .split .body,.qsplit .body{padding:26px 20px 150px}
   h1{font-size:26px;margin-bottom:16px}
   h2{font-size:22px}
   .lead{font-size:16px;margin-bottom:20px}
-  .qwrap{padding:30px 16px 130px}
+  .qwrap{padding:30px 16px 150px}
   .opts{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr 1fr;gap:10px}
   .card .cap{font-size:12px;padding:10px}
@@ -125,7 +127,7 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
 <!-- 0 START -->
 <section class="step on" data-step="start">
   <div class="split">
-    <div class="media"><img src="img/786aa03a.jpg" alt="До і після встановлення вінірів" fetchpriority="high"></div>
+    <div class="media" style="--pos:50% 28%"><img src="img/786aa03a.jpg" alt="До і після встановлення вінірів" fetchpriority="high"></div>
     <div class="body">
       <h1>Отримайте ідеальну посмішку за 1 візит 😁</h1>
       <p class="lead">✨ Без болю
@@ -162,7 +164,7 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
 <!-- 2 Q1 -->
 <section class="step" data-step="q1" data-q="Що для вас найважливіше в результаті?" data-required>
   <div class="qsplit">
-    <div class="media"><img src="img/2c67162c.jpg" alt="" loading="lazy"></div>
+    <div class="media" style="--pos:50% 18%"><img src="img/2c67162c.jpg" alt="" loading="lazy"></div>
     <div class="body">
       <h2>Що для вас найважливіше в результаті?</h2>
       <div class="opts" style="margin-top:22px">
@@ -192,7 +194,7 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
 <!-- 4 Q3 -->
 <section class="step" data-step="q3" data-q="Коли плануєте почати?" data-required>
   <div class="qsplit">
-    <div class="media"><img src="img/cb23c35a.jpg" alt="" loading="lazy"></div>
+    <div class="media" style="--pos:50% 4%"><img src="img/cb23c35a.jpg" alt="" loading="lazy"></div>
     <div class="body">
       <h2>Коли плануєте почати?</h2>
       <div class="opts" style="margin-top:22px">
@@ -220,6 +222,7 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
       <label class="consent"><input type="checkbox" id="consent" checked> <span>Я погоджуюсь з <a href="privacy.html" target="_blank" rel="noopener">політикою конфіденційності</a> та правилами використання *</span></label>
       <div class="errmsg" id="err"></div>
       <button class="btn wide" type="submit" id="submitBtn">📨 Готово!</button>
+      <button class="linkbtn" type="button" id="formBack">← Назад до питань</button>
     </form>
   </div>
 </section>
@@ -258,6 +261,7 @@ const CFG = {
 /* ===== PIXEL ===== */
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', CFG.pixel); fbq('track', 'PageView');
+document.write('<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id='+CFG.pixel+'&ev=PageView&noscript=1"></noscript>');
 
 /* ===== STATE ===== */
 const steps=[...document.querySelectorAll('.step')];
@@ -267,24 +271,29 @@ const bar=document.getElementById('bar'), nav=document.getElementById('nav'), ne
 const utm={}; new URLSearchParams(location.search).forEach((v,k)=>{ if(/^(utm_|fbclid|ad_|adset_|campaign_)/.test(k)) utm[k]=v; });
 try{ const s=sessionStorage.getItem('utm'); if(s&&!Object.keys(utm).length) Object.assign(utm,JSON.parse(s)); else if(Object.keys(utm).length) sessionStorage.setItem('utm',JSON.stringify(utm)); }catch(e){}
 
-function show(i){
+function show(i,push=true){
   cur=i; steps.forEach((s,k)=>s.classList.toggle('on',k===i));
   const s=steps[i], name=s.dataset.step;
   const isQ=!(name==='start'||name==='finish'||name==='form');
   nav.hidden=!isQ;
   bar.style.width=Math.round((i)/(steps.length-1)*100)+'%';
-  if(isQ){ nextBtn.disabled=!!s.dataset.required && !answers[s.dataset.q]; }
+  if(isQ){ nextBtn.disabled=('required' in s.dataset) && !answers[s.dataset.q]; }
   window.scrollTo(0,0);
   if(name==='form') setTimeout(()=>document.getElementById('name').focus(),200);
-  history.replaceState(null,'','#'+name);
+  if(push) history.pushState({i},'','#'+name); else history.replaceState({i},'','#'+name);
 }
-document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>{ if(cur===0) fbq('trackCustom','QuizStart'); show(cur+1); }));
-nextBtn.addEventListener('click',()=>show(cur+1));
-backBtn.addEventListener('click',()=>show(Math.max(0,cur-1)));
+window.addEventListener('popstate',e=>{ const i=e.state&&typeof e.state.i==='number'?e.state.i:0; if(i<cur && steps[cur].dataset.step!=='finish') show(i,false); else history.replaceState({i:cur},'','#'+steps[cur].dataset.step); });
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>{ if(cur===0) fbq('trackCustom','QuizStart'); go(cur+1); }));
+let advancing=false;
+function go(i){ show(i); }
+nextBtn.addEventListener('click',()=>{ if(!nextBtn.disabled) go(cur+1); });
+backBtn.addEventListener('click',()=>go(Math.max(0,cur-1)));
+document.getElementById('formBack').addEventListener('click',()=>go(cur-1));
 document.querySelectorAll('.step[data-q] .opt').forEach(o=>o.addEventListener('click',()=>{
   const sec=o.closest('.step'); sec.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel')); o.classList.add('sel');
   answers[sec.dataset.q]=o.dataset.v; nextBtn.disabled=false;
-  setTimeout(()=>show(cur+1),260);
+  if(advancing) return; advancing=true;
+  setTimeout(()=>{ advancing=false; if(steps[cur]===sec) show(cur+1); },260);
 }));
 
 /* ===== PHONE MASK ===== */
@@ -318,7 +327,7 @@ form.addEventListener('submit',async e=>{
   btn.disabled=false; btn.textContent='📨 Готово!';
   show(steps.length-1);
 });
-show(0);
+show(0,false);
 </script>
 </body>
 </html>
