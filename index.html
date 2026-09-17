@@ -308,7 +308,8 @@ form.addEventListener('submit',async e=>{
   const digits=ph.value.replace(/\D/g,'');
   err.textContent='';
   if(form.website.value) return; // honeypot
-  if(digits.length!==9||digits[0]==='0'){ ph.classList.add('err'); err.textContent='Введіть номер у форматі xx xxx xxxx'; ph.focus(); return; }
+  if(digits.length!==9){ ph.classList.add('err'); err.textContent='Введіть 9 цифр після +380, наприклад 67 123 4567'; ph.focus(); return; }
+  if(digits[0]==='0'){ ph.classList.add('err'); err.textContent='Номер має починатися з коду оператора (50, 63, 67, 93, 97…), а не з 0'; ph.focus(); return; }
   if(!document.getElementById('consent').checked){ err.textContent='Потрібна згода з політикою конфіденційності'; return; }
   const phone='+380'+digits;
   const payload={
