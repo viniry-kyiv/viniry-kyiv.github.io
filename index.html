@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Отримайте ідеальну посмішку за 1 візит 😁</title>
+<meta name="description" content="Композитні вініри в Києві: 18 одиниць за 39 990 грн. Без болю, без обточування, результат за 1 візит.">
+<meta property="og:title" content="Отримайте ідеальну посмішку за 1 візит 😁">
+<meta property="og:description" content="18 композитних вінірів за 39 990 грн. Без болю, без обточування, за 1 візит.">
+<meta property="og:image" content="img/786aa03a.jpg">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😁</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d3b37;--bg2:#0b322f;--card:#124a44;--card2:#16554e;--line:#2a6a62;--btn:#0e6b5c;--btn2:#128a76;--accent:#e0433f;--txt:#ffffff;--muted:#b9d3cf;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Manrope,Montserrat,system-ui,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1.35}
+button{font-family:inherit}
+a{color:inherit}
+.app{min-height:100dvh;display:flex;flex-direction:column}
+.progress{position:fixed;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.12);z-index:20}
+.progress i{display:block;height:100%;width:0;background:var(--btn2);transition:width .35s}
+.step{display:none;flex:1;flex-direction:column}
+.step.on{display:flex}
+/* split layout */
+.split{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100dvh}
+.split .media{position:relative;background:#000}
+.split .media img{width:100%;height:100%;object-fit:cover;display:block}
+.split .body{display:flex;flex-direction:column;justify-content:center;padding:56px 64px 40px;position:relative}
+h1{font-size:34px;font-weight:700;line-height:1.2;margin-bottom:22px}
+h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-bottom:12px}
+.lead{font-size:18px;color:var(--txt);line-height:1.6;margin-bottom:28px;white-space:pre-line}
+.desc{text-align:center;color:var(--txt);font-size:17px;line-height:1.5;max-width:720px;margin:0 auto 26px}
+.benefit{display:inline-flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:34px;font-weight:700;font-size:15px}
+.benefit .pc{width:34px;height:34px;border-radius:8px;background:rgba(224,67,63,.15);display:grid;place-items:center;color:var(--accent);font-size:20px;font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--btn);color:#fff;border:0;border-radius:10px;padding:18px 40px;font-size:15px;font-weight:700;letter-spacing:.04em;cursor:pointer;text-decoration:none;transition:background .2s,transform .1s;min-height:56px}
+.btn:hover{background:var(--btn2)}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.wide{width:100%;max-width:340px}
+.foot{margin-top:auto;padding-top:28px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.foot a{color:var(--muted);text-decoration:none}
+/* question layout */
+.qwrap{flex:1;display:flex;flex-direction:column;padding:48px 24px 110px;max-width:1180px;width:100%;margin:0 auto}
+.qsplit{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:100dvh}
+.qsplit .media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9)}
+.qsplit .media{background:var(--bg2);position:relative}
+.qsplit .media:after{content:"";position:absolute;inset:0;background:rgba(13,59,55,.35)}
+.qsplit .body{display:flex;flex-direction:column;justify-content:center;padding:56px 64px 110px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.opt{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px;cursor:pointer;font-size:15px;font-weight:500;transition:background .15s,border-color .15s;user-select:none;min-height:66px}
+.opt:hover{background:var(--card2)}
+.opt .dot{flex:none;width:18px;height:18px;border-radius:50%;border:2px solid #9ec2bc;display:grid;place-items:center}
+.opt.sel{border-color:#7fd1c1;background:var(--card2)}
+.opt.sel .dot{border-color:#7fd1c1}
+.opt.sel .dot:after{content:"";width:9px;height:9px;border-radius:50%;background:#7fd1c1}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1040px;margin:0 auto;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;transition:border-color .15s,transform .15s}
+.card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.card .cap{padding:12px 12px;font-size:13px;font-weight:500;min-height:44px;display:flex;align-items:center}
+.card.sel{border-color:#7fd1c1;box-shadow:0 0 0 2px #7fd1c1 inset}
+.card:hover{transform:translateY(-2px)}
+.gallery .card{cursor:default}
+.gallery .card:hover{transform:none}
+/* nav */
+.nav{position:fixed;left:0;right:0;bottom:0;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(to top,rgba(13,59,55,.98),rgba(13,59,55,.7),transparent);z-index:15;pointer-events:none}
+.nav>*{pointer-events:auto}
+.nav[hidden]{display:none}
+.badge{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:700;font-size:13px}
+.badge .pc{width:28px;height:28px;border-radius:8px;background:rgba(224,67,63,.15);display:grid;place-items:center;color:var(--accent);font-weight:800}
+.navbtns{display:flex;gap:10px;align-items:center}
+.back{background:transparent;border:0;color:#7aa39d;font-size:22px;cursor:pointer;padding:12px 16px}
+.next{min-width:100px;padding:0 34px;height:54px;border-radius:10px;border:0;background:var(--btn);color:#fff;font-size:22px;cursor:pointer;transition:background .2s}
+.next:hover{background:var(--btn2)}
+.next[disabled]{opacity:.4;cursor:not-allowed}
+/* form */
+.form{max-width:360px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:12px}
+.inp{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;color:#fff;font-size:15px;padding:0 16px;height:52px;outline:0;font-family:inherit}
+.inp::placeholder{color:#8fb3ad}
+.inp:focus{border-color:#7fd1c1}
+.inp.err{border-color:var(--accent)}
+.phone{display:flex;gap:8px}
+.phone .cc{flex:none;height:52px;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 14px;font-weight:600;font-size:15px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);line-height:1.4;cursor:pointer}
+.consent input{margin-top:2px;accent-color:#128a76;width:16px;height:16px}
+.consent a{color:var(--muted)}
+.errmsg{color:#ffb3b0;font-size:13px;min-height:18px}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+/* finish */
+.finish .body{text-align:center;align-items:center}
+.finish h1{text-align:center}
+.finish .lead{text-align:center}
+.finish .media img{object-fit:contain;background:var(--bg2)}
+.spin{width:22px;height:22px;border:3px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (max-width:860px){
+  .split,.qsplit{grid-template-columns:1fr;min-height:auto}
+  .split .media{height:56vw;max-height:420px}
+  .qsplit .media{height:44vw;max-height:300px}
+  .split .body,.qsplit .body{padding:26px 20px 120px}
+  h1{font-size:26px;margin-bottom:16px}
+  h2{font-size:22px}
+  .lead{font-size:16px;margin-bottom:20px}
+  .qwrap{padding:30px 16px 130px}
+  .opts{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr;gap:10px}
+  .card .cap{font-size:12px;padding:10px}
+  .nav{padding:12px 14px;flex-wrap:wrap}
+  .badge{font-size:12px;padding:8px 10px}
+  .next{height:50px;padding:0 28px}
+  .btn.wide{max-width:none}
+  .benefit{margin-bottom:24px}
+  .finish .media{height:auto;max-height:none}
+  .finish .media img{height:auto}
+}
+</style>
+</head>
+<body>
+<div class="progress"><i id="bar"></i></div>
+<div class="app" id="app">
+
+<!-- 0 START -->
+<section class="step on" data-step="start">
+  <div class="split">
+    <div class="media"><img src="img/786aa03a.jpg" alt="До і після встановлення вінірів" fetchpriority="high"></div>
+    <div class="body">
+      <h1>Отримайте ідеальну посмішку за 1 візит 😁</h1>
+      <p class="lead">✨ Без болю
+✨ Без обточування
+✨ Результат після 1 процедури</p>
+      <div class="benefit"><span class="pc">%</span><span>39 990 грн за 18 одиниць</span></div>
+      <div><button class="btn wide" data-next>ХОЧУ ПОСМІШКУ</button></div>
+      <div class="foot">
+        <a href="tel:+380938422406">Телефон клініки: +380 (93) 842 24 06</a>
+        <a href="privacy.html" target="_blank" rel="noopener">Політика конфіденційності</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1 GALLERY -->
+<section class="step" data-step="gallery" data-q="Приклади робіт">
+  <div class="qwrap gallery">
+    <h2>ПРИКЛАДИ РОБІТ 💫</h2>
+    <p class="desc">Нашою командою лікарів уже виконано понад 1000 робіт зі встановлення композитних вінірів ✨ Просто погортайте приклади та натисніть «Далі»</p>
+    <div class="cards">
+      <div class="card"><img src="img/9f1a01cf.jpg" alt="Кейс 1" loading="lazy"><div class="cap">Кейс 1</div></div>
+      <div class="card"><img src="img/4095cef3.jpg" alt="Кейс 2" loading="lazy"><div class="cap">Кейс 2</div></div>
+      <div class="card"><img src="img/e91ab2d7.jpg" alt="Кейс 3" loading="lazy"><div class="cap">Кейс 3</div></div>
+      <div class="card"><img src="img/1d7397fb.jpg" alt="Кейс 4" loading="lazy"><div class="cap">Кейс 4</div></div>
+      <div class="card"><img src="img/539f9e67.jpg" alt="Кейс 5" loading="lazy"><div class="cap">Кейс 5</div></div>
+      <div class="card"><img src="img/6a23a8a3.jpg" alt="Кейс 6" loading="lazy"><div class="cap">Кейс 6</div></div>
+      <div class="card"><img src="img/81ad5803.jpg" alt="Кейс 7" loading="lazy"><div class="cap">Кейс 7</div></div>
+      <div class="card"><img src="img/229d54a0.jpg" alt="Кейс 8" loading="lazy"><div class="cap">Кейс 8</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 Q1 -->
+<section class="step" data-step="q1" data-q="Що для вас найважливіше в результаті?" data-required>
+  <div class="qsplit">
+    <div class="media"><img src="img/2c67162c.jpg" alt="" loading="lazy"></div>
+    <div class="body">
+      <h2>Що для вас найважливіше в результаті?</h2>
+      <div class="opts" style="margin-top:22px">
+        <div class="opt" data-v="Щоб виглядало максимально природно"><span class="dot"></span>Щоб виглядало максимально природно</div>
+        <div class="opt" data-v="Щоб зробили за один візит"><span class="dot"></span>Щоб зробили за один візит</div>
+        <div class="opt" data-v="Щоб не обточували здорові зуби"><span class="dot"></span>Щоб не обточували здорові зуби</div>
+        <div class="opt" data-v="Щоб служило якомога довше"><span class="dot"></span>Щоб служило якомога довше</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Q2 cards -->
+<section class="step" data-step="q2" data-q="Що вас найбільше турбує в посмішці?" data-required>
+  <div class="qwrap">
+    <h2>Що вас найбільше турбує в посмішці? 😁</h2>
+    <div class="cards" style="margin-top:22px">
+      <div class="card opt" data-v="Колір зубів, жовтизна"><img src="img/82df0603.jpg" alt="" loading="lazy"><div class="cap">Колір зубів, жовтизна</div></div>
+      <div class="card opt" data-v="Щілини між зубами"><img src="img/423b5664.jpg" alt="" loading="lazy"><div class="cap">Щілини між зубами</div></div>
+      <div class="card opt" data-v="Форма або розмір зубів"><img src="img/cb0370b5.jpg" alt="" loading="lazy"><div class="cap">Форма або розмір зубів</div></div>
+      <div class="card opt" data-v="Сколи та стерті краї"><img src="img/c653936a.jpg" alt="" loading="lazy"><div class="cap">Сколи та стерті краї</div></div>
+      <div class="card opt" data-v="Просто хочу ідеальну посмішку"><img src="img/2b118f04.jpg" alt="" loading="lazy"><div class="cap">Просто хочу ідеальну посмішку</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 Q3 -->
+<section class="step" data-step="q3" data-q="Коли плануєте почати?" data-required>
+  <div class="qsplit">
+    <div class="media"><img src="img/cb23c35a.jpg" alt="" loading="lazy"></div>
+    <div class="body">
+      <h2>Коли плануєте почати?</h2>
+      <div class="opts" style="margin-top:22px">
+        <div class="opt" data-v="Готова/ий записатись цього тижня 🔥"><span class="dot"></span>Готова/ий записатись цього тижня 🔥</div>
+        <div class="opt" data-v="Протягом місяця"><span class="dot"></span>Протягом місяця</div>
+        <div class="opt" data-v="Через 2–3 місяці"><span class="dot"></span>Через 2–3 місяці</div>
+        <div class="opt" data-v="Поки просто дізнаюсь ціну"><span class="dot"></span>Поки просто дізнаюсь ціну</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 FORM -->
+<section class="step" data-step="form">
+  <div class="qwrap" style="justify-content:center">
+    <h2>Як ми можемо з вами зв’язатися?</h2>
+    <p class="desc">✅ Ви отримуєте 18 вінірів за 39 990 грн. Залиште контакти — адміністратор звʼяжеться та узгодить зручний час</p>
+    <form class="form" id="leadForm" novalidate>
+      <input class="inp" id="name" name="name" placeholder="Ім'я" autocomplete="given-name" maxlength="60">
+      <div class="phone">
+        <div class="cc">🇺🇦 +380</div>
+        <input class="inp" id="phone" name="phone" type="tel" inputmode="numeric" placeholder="xx xxx xxxx*" autocomplete="tel-national" maxlength="12">
+      </div>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off">
+      <label class="consent"><input type="checkbox" id="consent" checked> <span>Я погоджуюсь з <a href="privacy.html" target="_blank" rel="noopener">політикою конфіденційності</a> та правилами використання *</span></label>
+      <div class="errmsg" id="err"></div>
+      <button class="btn wide" type="submit" id="submitBtn">📨 Готово!</button>
+    </form>
+  </div>
+</section>
+
+<!-- 6 FINISH -->
+<section class="step finish" data-step="finish">
+  <div class="split">
+    <div class="media"><img src="img/396cfbcf.jpg" alt="Відгуки пацієнтів" loading="lazy"></div>
+    <div class="body">
+      <h1>Дякуємо! Вашу заявку прийнято ✅</h1>
+      <p class="lead">Наш адміністратор звʼяжеться з вами найближчим часом, щоб узгодити зручний час візиту. Гарного дня! 😊</p>
+      <div class="benefit"><span class="pc">%</span><span>39 990 грн за 18 одиниць</span></div>
+      <div><a class="btn wide" href="https://dentalclinic.in.ua/" target="_blank" rel="noopener">Перейти на сайт</a></div>
+      <div class="foot"><a href="tel:+380938422406">Телефон клініки: +380 (93) 842 24 06</a></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="nav" id="nav" hidden>
+  <div class="badge"><span class="pc">%</span><span>39 990 грн за 18 одиниць</span></div>
+  <div class="navbtns">
+    <button class="back" id="back" aria-label="Назад">←</button>
+    <button class="next" id="next" aria-label="Далі">→</button>
+  </div>
+</div>
+
+<script>
+/* ===== CONFIG ===== */
+const CFG = {
+  endpoint: 'https://script.google.com/macros/s/AKfycbw5BtgnUHJdTEUTYQdDI6G84snyE8jbG7zEQVZ1vUp6yWDZ8j4t2Qu7SrFLGTa_l8fUFA/exec',
+  pixel: '1018299044180559',
+  quiz: 'viniry-kyiv'
+};
+/* ===== PIXEL ===== */
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', CFG.pixel); fbq('track', 'PageView');
+
+/* ===== STATE ===== */
+const steps=[...document.querySelectorAll('.step')];
+const answers={};
+let cur=0;
+const bar=document.getElementById('bar'), nav=document.getElementById('nav'), nextBtn=document.getElementById('next'), backBtn=document.getElementById('back');
+const utm={}; new URLSearchParams(location.search).forEach((v,k)=>{ if(/^(utm_|fbclid|ad_|adset_|campaign_)/.test(k)) utm[k]=v; });
+try{ const s=sessionStorage.getItem('utm'); if(s&&!Object.keys(utm).length) Object.assign(utm,JSON.parse(s)); else if(Object.keys(utm).length) sessionStorage.setItem('utm',JSON.stringify(utm)); }catch(e){}
+
+function show(i){
+  cur=i; steps.forEach((s,k)=>s.classList.toggle('on',k===i));
+  const s=steps[i], name=s.dataset.step;
+  const isQ=!(name==='start'||name==='finish'||name==='form');
+  nav.hidden=!isQ;
+  bar.style.width=Math.round((i)/(steps.length-1)*100)+'%';
+  if(isQ){ nextBtn.disabled=!!s.dataset.required && !answers[s.dataset.q]; }
+  window.scrollTo(0,0);
+  if(name==='form') setTimeout(()=>document.getElementById('name').focus(),200);
+  history.replaceState(null,'','#'+name);
+}
+document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>{ if(cur===0) fbq('trackCustom','QuizStart'); show(cur+1); }));
+nextBtn.addEventListener('click',()=>show(cur+1));
+backBtn.addEventListener('click',()=>show(Math.max(0,cur-1)));
+document.querySelectorAll('.step[data-q] .opt').forEach(o=>o.addEventListener('click',()=>{
+  const sec=o.closest('.step'); sec.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel')); o.classList.add('sel');
+  answers[sec.dataset.q]=o.dataset.v; nextBtn.disabled=false;
+  setTimeout(()=>show(cur+1),260);
+}));
+
+/* ===== PHONE MASK ===== */
+const ph=document.getElementById('phone');
+ph.addEventListener('input',()=>{ let d=ph.value.replace(/\D/g,''); if(d.startsWith('380')) d=d.slice(3); if(d.startsWith('0')&&d.length>9) d=d.slice(1); d=d.slice(0,9); ph.value=d.replace(/(\d{2})(\d{0,3})(\d{0,4})/,(m,a,b,c)=>[a,b,c].filter(Boolean).join(' ')); ph.classList.remove('err'); });
+
+/* ===== SUBMIT ===== */
+const form=document.getElementById('leadForm'), err=document.getElementById('err'), btn=document.getElementById('submitBtn');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const digits=ph.value.replace(/\D/g,'');
+  err.textContent='';
+  if(form.website.value) return; // honeypot
+  if(digits.length!==9||digits[0]==='0'){ ph.classList.add('err'); err.textContent='Введіть номер у форматі xx xxx xxxx'; ph.focus(); return; }
+  if(!document.getElementById('consent').checked){ err.textContent='Потрібна згода з політикою конфіденційності'; return; }
+  const phone='+380'+digits;
+  const payload={
+    source:'quiz-site', quiz:CFG.quiz, created_at:Math.floor(Date.now()/1000),
+    simpleData:{ contacts:{ name:{name:'Ім\'я',value:name}, phone:{name:'xx xxx xxxx',value:phone} },
+      answers:steps.filter(s=>s.dataset.q&&s.dataset.required).map(s=>({question:s.dataset.q,answer:answers[s.dataset.q]||'[skipped]'})) },
+    utm:utm, utm_campaign:utm.utm_campaign||'', utm_term:utm.utm_term||'', utm_content:utm.utm_content||'', utm_source:utm.utm_source||'', utm_medium:utm.utm_medium||'',
+    page:location.href.split('?')[0], ua:navigator.userAgent, fbp:(document.cookie.match(/_fbp=([^;]+)/)||[])[1]||'', fbc:(document.cookie.match(/_fbc=([^;]+)/)||[])[1]||''
+  };
+  btn.disabled=true; btn.innerHTML='<span class="spin"></span>';
+  try{
+    await fetch(CFG.endpoint,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload),keepalive:true});
+  }catch(e){ console.warn('send failed',e); }
+  try{ fbq('track','Lead',{content_name:'viniry-kyiv quiz'}); }catch(e){}
+  try{ localStorage.setItem('lead_sent',String(Date.now())); }catch(e){}
+  btn.disabled=false; btn.textContent='📨 Готово!';
+  show(steps.length-1);
+});
+show(0);
+</script>
+</body>
+</html>
