@@ -315,7 +315,7 @@ form.addEventListener('submit',async e=>{
   const payload={
     source:'quiz-site', quiz:CFG.quiz, created_at:Math.floor(Date.now()/1000),
     simpleData:{ contacts:{ name:{name:'Ім\'я',value:name}, phone:{name:'xx xxx xxxx',value:phone} },
-      answers:steps.filter(s=>s.dataset.q&&s.dataset.required).map(s=>({question:s.dataset.q,answer:answers[s.dataset.q]||'[skipped]'})) },
+      answers:steps.filter(s=>s.dataset.q&&('required' in s.dataset)).map(s=>({question:s.dataset.q,answer:answers[s.dataset.q]||'[skipped]'})) },
     utm:utm, utm_campaign:utm.utm_campaign||'', utm_term:utm.utm_term||'', utm_content:utm.utm_content||'', utm_source:utm.utm_source||'', utm_medium:utm.utm_medium||'',
     page:location.href.split('?')[0], ua:navigator.userAgent, fbp:(document.cookie.match(/_fbp=([^;]+)/)||[])[1]||'', fbc:(document.cookie.match(/_fbc=([^;]+)/)||[])[1]||''
   };
