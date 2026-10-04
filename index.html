@@ -216,7 +216,7 @@ h2{font-size:30px;font-weight:700;line-height:1.2;text-align:center;margin-botto
       <input class="inp" id="name" name="name" placeholder="Ім'я" autocomplete="given-name" maxlength="60">
       <div class="phone">
         <div class="cc">🇺🇦 +380</div>
-        <input class="inp" id="phone" name="phone" type="tel" inputmode="numeric" placeholder="xx xxx xxxx*" autocomplete="tel-national" maxlength="12">
+        <input class="inp" id="phone" name="phone" type="tel" inputmode="numeric" placeholder="0xx xxx xxxx*" autocomplete="tel">
       </div>
       <input class="hp" name="website" tabindex="-1" autocomplete="off">
       <label class="consent"><input type="checkbox" id="consent" checked> <span>Я погоджуюсь з <a href="privacy.html" target="_blank" rel="noopener">політикою конфіденційності</a> та правилами використання *</span></label>
@@ -298,18 +298,20 @@ document.querySelectorAll('.step[data-q] .opt').forEach(o=>o.addEventListener('c
 
 /* ===== PHONE MASK ===== */
 const ph=document.getElementById('phone');
-ph.addEventListener('input',()=>{ let d=ph.value.replace(/\D/g,''); if(d.startsWith('380')) d=d.slice(3); if(d.startsWith('0')&&d.length>9) d=d.slice(1); d=d.slice(0,9); ph.value=d.replace(/(\d{2})(\d{0,3})(\d{0,4})/,(m,a,b,c)=>[a,b,c].filter(Boolean).join(' ')); ph.classList.remove('err'); });
+// приймаємо будь-який формат: +380…, 380…, 80…, 0XX…, XX… (автозаповнення, вставка, з пробілами/дужками)
+const phDigits=v=>{ let d=String(v).replace(/\D/g,''); if(d.startsWith('380')) d=d.slice(3); else if(d.startsWith('80')&&d.length>=11) d=d.slice(2); return d.startsWith('0')?d.slice(0,10):d.slice(0,9); };
+ph.addEventListener('input',()=>{ const d=phDigits(ph.value); ph.value=d.startsWith('0')? d.replace(/(\d{3})(\d{0,3})(\d{0,4})/,(m,a,b,c)=>[a,b,c].filter(Boolean).join(' ')) : d.replace(/(\d{2})(\d{0,3})(\d{0,4})/,(m,a,b,c)=>[a,b,c].filter(Boolean).join(' ')); ph.classList.remove('err'); });
 
 /* ===== SUBMIT ===== */
 const form=document.getElementById('leadForm'), err=document.getElementById('err'), btn=document.getElementById('submitBtn');
 form.addEventListener('submit',async e=>{
   e.preventDefault();
   const name=document.getElementById('name').value.trim();
-  const digits=ph.value.replace(/\D/g,'');
+  let digits=phDigits(ph.value); if(digits.startsWith('0')) digits=digits.slice(1);
   err.textContent='';
   if(form.website.value) return; // honeypot
-  if(digits.length!==9){ ph.classList.add('err'); err.textContent='Введіть 9 цифр після +380, наприклад 67 123 4567'; ph.focus(); return; }
-  if(digits[0]==='0'){ ph.classList.add('err'); err.textContent='Номер має починатися з коду оператора (50, 63, 67, 93, 97…), а не з 0'; ph.focus(); return; }
+  if(digits.length!==9){ ph.classList.add('err'); err.textContent='Введіть номер повністю, наприклад 067 123 4567'; ph.focus(); return; }
+  if(digits[0]==='0'){ ph.classList.add('err'); err.textContent='Перевірте номер: після 0 має йти код оператора (50, 63, 67, 93, 97…)'; ph.focus(); return; }
   if(!document.getElementById('consent').checked){ err.textContent='Потрібна згода з політикою конфіденційності'; return; }
   const phone='+380'+digits;
   const payload={
